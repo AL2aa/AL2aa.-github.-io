@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f9;
+      --text-color: #333;
+      --card-bg: #fff;
+      --header-bg: #4CAF50;
+    }
+    body.dark {
+      --bg-color: #181818;
+      --text-color: #f9f9f9;
+      --card-bg: #242424;
+      --header-bg: #222;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--header-bg);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+    /* Dark mode toggle button */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ffdd57;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #ffc107;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <header>
+    <h1>Hi, I'm Alaa 👋</h1>
+    <p>AI & ML Enthusiast | Competitive Programmer | Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I'm a Computer Science student passionate about AI, Machine Learning, and software development. I love building smart solutions and working on cool projects 🚀.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>🌍 Multilingual Image Captioning System</li>
+        <li>🎮 Tic Tac Toe Game</li>
+        <li>🌱 Iris Classification using KNN</li>
+        <li>💻 Smart Codeforces Assistant (in progress)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:alaa@example.com">alaa@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/your-profile</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Alaa Mamdouh | Built with ❤️</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const btn = document.querySelector('.toggle-btn');
+      if (document.body.classList.contains('dark')) {
+        btn.textContent = "☀️ Light Mode";
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+      }
+    }
+  </script>
+
+</body>
+</html>
